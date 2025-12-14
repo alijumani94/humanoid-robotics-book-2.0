@@ -31,11 +31,7 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- **Accuracy**: The content MUST be technically accurate and up-to-date.
-- **Clarity**: The textbook MUST be written in a clear and understandable manner.
-- **Innovation**: The project MUST leverage innovative AI-native features.
-- **Collaboration**: The project MUST foster a collaborative environment.
-- **Accessibility**: The textbook MUST be accessible to learners from diverse backgrounds.
+[Gates determined based on constitution file]
 
 ## Project Structure
 

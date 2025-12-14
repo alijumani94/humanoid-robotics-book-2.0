@@ -4,6 +4,10 @@
 
 Welcome to the exciting and rapidly evolving field of Physical AI and Humanoid Robotics. This textbook will guide you through the fundamental concepts, advanced theories, and practical applications that define this interdisciplinary domain. Physical AI refers to intelligent systems that interact with the physical world, often embodied in robotic forms. Humanoid robotics, a significant subset of Physical AI, focuses on creating robots that resemble and often mimic human capabilities and behaviors. From industrial automation to assistive technologies, the impact of physical AI and humanoid robotics is transforming industries and daily life. This chapter serves as a foundational introduction, laying out the scope, historical context, and key challenges in building intelligent physical systems.
 
+<!-- AI AGENT PROMPT PLACEHOLDER -->
+
+<!-- AI QUIZ/DEBUGGING AGENT PLACEHOLDER -->
+
 ## Theory
 
 The theoretical underpinnings of Physical AI and Humanoid Robotics draw from a rich tapestry of disciplines, including artificial intelligence, robotics, control theory, biomechanics, cognitive science, and materials science. At its core, the theory revolves around enabling robots to perceive their environment, process information, make decisions, and execute actions in the physical world. Key theoretical concepts include:

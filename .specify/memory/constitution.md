@@ -1,55 +1,73 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+---
+Sync Impact Report
+---
+- Version change: N/A -> 1.0.0
+- Modified principles:
+  - `[PRINCIPLE_1_NAME]` -> `Accuracy`
+  - `[PRINCIPLE_2_NAME]` -> `Clarity`
+  - `[PRINCIPLE_3_NAME]` -> `Innovation`
+  - `[PRINCIPLE_4_NAME]` -> `Collaboration`
+  - `[PRINCIPLE_5_NAME]` -> `Accessibility`
+- Added sections: `Purpose`, `Vision`, `Mission`, `Governance`, `Membership`, `Deliverables`, `Intellectual Property`
+- Removed sections: `[SECTION_2_NAME]`, `[SECTION_3_NAME]`
+- Templates requiring updates:
+  - ✅ `.specify/templates/plan-template.md`
+- Follow-up TODOs: None
+-->
+
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Accuracy
+The content MUST be technically accurate and up-to-date with the latest research in humanoid robotics.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Clarity
+The textbook MUST be written in a clear and understandable manner for the target audience.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Innovation
+The project MUST leverage innovative AI-native features to create an engaging learning experience.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Collaboration
+The project MUST foster a collaborative environment for all contributors.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Accessibility
+The textbook MUST be accessible to learners from diverse backgrounds and skill levels.
 
-### [PRINCIPLE_6_NAME]
+## Purpose
+Create an AI-native textbook that teaches Physical AI, humanoid robotics, and embodied intelligence using interactive AI agents.
 
+## Vision
+Enable global learners to master humanoid robotics through an innovative, AI-powered learning experience.
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Mission
+- Write a complete robotics textbook.
+- Integrate AI tutors, examples, and labs.
+- Support O/A Level, university, and professional learners.
+- Contribute to Panaversity’s AI-native education ecosystem.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+- Guided by Panaversity founders (Zia, Rehan, Junaid, Wania).
+- Teams:
+  - Content team
+  - Agent development team
+  - Design team
+  - Review board
+- Amendments may be made by project leadership.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+## Membership
+- Open to hackathon contributors and invited experts.
+- High performers may be considered for Panaversity teaching or leadership roles.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+## Deliverables
+- Robotics textbook
+- Course outline & labs
+- Robotics specifications
+- Interactive AI agents
+- Standardized spec-kit template
+
+## Intellectual Property
+All work belongs to Panaversity; contributors receive proper credit.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-14 | **Last Amended**: 2025-12-14
