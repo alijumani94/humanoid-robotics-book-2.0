@@ -1,3 +1,5 @@
+import AIAgentPrompt from '@site/src/components/AIAgentPrompt';
+
 # Chapter 01: Introduction to Physical AI & Humanoid Robotics
 
 ## Introduction
@@ -7,6 +9,19 @@ Welcome to the exciting and rapidly evolving field of Physical AI and Humanoid R
 <!-- AI AGENT PROMPT PLACEHOLDER -->
 
 <!-- AI QUIZ/DEBUGGING AGENT PLACEHOLDER -->
+
+<AIAgentPrompt type="explainer">
+  **Question:** Can you explain the difference between Physical AI and traditional AI in more detail?
+</AIAgentPrompt>
+
+<AIAgentPrompt type="quiz">
+  **Question:** Which of the following is NOT a core theoretical concept in Physical AI?
+  A) Perception
+  B) Cognition and Decision Making
+  C) Purely abstract reasoning without physical interaction
+  D) Control Theory
+  **Answer:** C
+</AIAgentPrompt>
 
 ## Theory
 

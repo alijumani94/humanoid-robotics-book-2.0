@@ -1,5 +1,7 @@
 # Chapter 2: Robot Locomotion
 
+import AIAgentPrompt from '@site/src/components/AIAgentPrompt';
+
 ## Introduction
 Robot locomotion is the study of how robots move through their environment. It encompasses the design, control, and analysis of systems that enable robots to navigate, traverse obstacles, and interact with the physical world. Understanding locomotion is fundamental to developing effective and versatile humanoid robots, as it directly impacts their ability to perform tasks, explore diverse terrains, and safely operate alongside humans. This chapter will delve into the various principles and mechanisms behind robot movement, from basic wheeled systems to advanced bipedal walking.
 
@@ -19,6 +21,16 @@ Dynamics, in contrast, considers the forces, torques, and inertia involved in ro
 *   **Center of Mass (CoM)**: The average position of all the mass in the robot. Its trajectory is critical for balance and stability.
 *   **Contact Dynamics**: Modeling the interaction between the robot's feet and the ground, including friction and impact.
 
+<AIAgentPrompt type="explainer" title="Understanding ZMP and Balance in Bipedal Robots">
+Help me understand the Zero Moment Point (ZMP) and Center of Mass (CoM) concepts in bipedal locomotion. Explain:
+- Why is ZMP important for stable walking?
+- What is the support polygon and why must ZMP stay within it?
+- How do robots adjust their CoM trajectory during walking?
+- The difference between static and dynamic balance
+
+Use simple analogies and examples to make these concepts clear.
+</AIAgentPrompt>
+
 ### Locomotion Mechanisms
 
 #### Wheeled Locomotion
@@ -35,6 +47,17 @@ Dynamics, in contrast, considers the forces, torques, and inertia involved in ro
 Gait refers to the specific pattern of limb movement during locomotion.
 *   **Static vs. Dynamic Gaits**: Static gaits maintain stability at all times, while dynamic gaits involve controlled falls and recovery (e.g., human walking).
 *   **Gait Planning**: Generating sequences of joint trajectories and contact forces to achieve desired motion. This often involves optimization techniques to minimize energy consumption or maximize stability.
+
+<AIAgentPrompt type="quiz" title="Test Your Knowledge: Locomotion Mechanisms">
+Quiz me on robot locomotion concepts covered in this chapter:
+1. The differences between wheeled, bipedal, and quadrupedal locomotion
+2. When to choose each locomotion mechanism based on terrain and task requirements
+3. The trade-offs between static and dynamic gaits
+4. Forward vs. inverse kinematics in locomotion
+5. The role of ZMP in bipedal walking stability
+
+Ask me conceptual and calculation-based questions to test my understanding.
+</AIAgentPrompt>
 
 ## Examples
 
@@ -58,5 +81,18 @@ Quadruped robots, like Boston Dynamics' Spot, utilize inverse kinematics to dete
 
 1.  **Inverse Kinematics for a Robotic Arm**: A robotic arm with two links of lengths L1 and L2 is used to position a gripper. Given a desired (x, y) position for the gripper, derive the inverse kinematics equations to find the required joint angles (θ1, θ2). Discuss potential issues like multiple solutions or unreachable points.
 2.  **Dynamic Walking Simulation**: Develop a simplified simulation of a 2D bipedal robot walking. Implement a basic controller that adjusts ankle torques to maintain ZMP within the foot's support area during single-support phase. Assume constant forward velocity and focus on lateral balance. What challenges arise when trying to achieve stable walking?
+
+<AIAgentPrompt type="lab-assistant" title="Lab Assistant: Bipedal Walking Simulation">
+I'm here to help you with Practice Problem 2 - Dynamic Walking Simulation. I can assist with:
+- Setting up a 2D bipedal robot model with appropriate parameters (link lengths, masses, inertia)
+- Implementing ZMP calculation from force and moment equations
+- Designing a PID or model predictive controller for ankle torque adjustment
+- Using physics simulation libraries (PyBullet, MuJoCo, or simple numerical integration)
+- Debugging stability issues and visualizing the robot's motion and ZMP trajectory
+- Analyzing the challenges in achieving stable walking (sensor noise, model uncertainties, computational delays)
+
+Share your approach or code, and I'll guide you through building a working simulation.
+</AIAgentPrompt>
+
 3.  **Terrain Navigation Strategy**: Propose a high-level control strategy for a quadruped robot to climb a staircase. Consider the sensors needed, the sequence of leg movements, and how balance would be maintained during the ascent.
 4.  **Energy Efficiency in Locomotion**: Compare and contrast the energy efficiency of wheeled, tracked, and legged locomotion for different types of terrain (e.g., flat ground, rocky terrain, sand). Discuss the trade-offs in terms of speed, stability, and power consumption for each mechanism.

@@ -1,0 +1,61 @@
+.aiAgentPrompt {
+  --ifm-code-font-size: 95%; /* Inherit code font size */
+  background-color: var(--ifm-background-color);
+  border-radius: var(--ifm-border-radius);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-left: 5px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  color: var(--ifm-font-color-base);
+}
+
+.content {
+  color: var(--ifm-font-color-base);
+  font-size: 0.95rem;
+}
+
+/* Type-specific styling */
+.explainer {
+  border-left-color: var(--ifm-color-info);
+  background-color: color-mix(in srgb, var(--ifm-color-info) 10%, transparent);
+}
+
+.quiz {
+  border-left-color: var(--ifm-color-warning);
+  background-color: color-mix(in srgb, var(--ifm-color-warning) 10%, transparent);
+}
+
+.lab-assistant {
+  border-left-color: var(--ifm-color-success);
+  background-color: color-mix(in srgb, var(--ifm-color-success) 10%, transparent);
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .explainer {
+  background-color: color-mix(in srgb, var(--ifm-color-info) 20%, transparent);
+}
+
+html[data-theme='dark'] .quiz {
+  background-color: color-mix(in srgb, var(--ifm-color-warning) 20%, transparent);
+}
+
+html[data-theme='dark'] .lab-assistant {
+  background-color: color-mix(in srgb, var(--ifm-color-success) 20%, transparent);
+}

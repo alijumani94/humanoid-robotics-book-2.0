@@ -1,5 +1,7 @@
 # Chapter 03: Robot Manipulation
 
+import AIAgentPrompt from '@site/src/components/AIAgentPrompt';
+
 ## Introduction
 Robot manipulation is a fundamental aspect of robotics, enabling robots to interact with their physical environment by grasping, moving, and reorienting objects. This chapter delves into the core concepts, techniques, and challenges associated with robot manipulation. We will explore the theoretical underpinnings, practical applications, and emerging trends that are shaping the future of robotic manipulation in various domains, from industrial automation to service robotics and human-robot collaboration. Understanding robot manipulation is crucial for developing intelligent agents that can perform complex tasks in unstructured and dynamic environments.
 
@@ -14,11 +16,34 @@ Robot dynamics, in contrast to kinematics, focuses on the relationship between f
 ### Grasping
 Grasping is the process by which a robot gripper or hand seizes and holds an object. This involves understanding grasp stability, force closure, and form closure. Various gripper types, such as two-finger parallel grippers, three-finger adaptive grippers, and multi-fingered hands, are designed to achieve stable grasps for different object geometries and tasks. Grasp planning algorithms aim to find optimal grasp configurations to ensure secure manipulation.
 
+<AIAgentPrompt type="explainer" title="Understanding Force Closure and Grasp Stability">
+Help me understand the concepts of force closure and form closure in robot grasping. Explain:
+- What is force closure and why is it important for stable grasping?
+- What is form closure and how does it differ from force closure?
+- How many contact points are typically needed for force closure in 2D vs. 3D?
+- How do different gripper types (parallel jaw, three-finger, multi-fingered) achieve stable grasps?
+- Real-world examples of when each type of closure is preferred
+
+Use diagrams, analogies, and simple examples to make these concepts clear.
+</AIAgentPrompt>
+
 ### Motion Planning
 Motion planning involves computing a collision-free path for a robot from a start configuration to a goal configuration. This is often done in the robot's configuration space (C-space). Common algorithms include sampling-based methods (e.g., RRT, PRM) and optimization-based methods. Constraints such as joint limits, obstacles, and task requirements must be considered during motion planning.
 
 ### Control
 Robot control systems are responsible for executing planned motions and responding to real-time changes. This includes position control, velocity control, and force control. PID controllers are widely used for trajectory tracking, while more advanced techniques like impedance control are employed for compliant interaction with the environment, essential for tasks requiring force exertion or interaction with humans.
+
+<AIAgentPrompt type="quiz" title="Test Your Knowledge: Robot Manipulation">
+Quiz me on robot manipulation concepts covered in this chapter:
+1. Forward kinematics vs. inverse kinematics
+2. Grasp stability, force closure, and form closure principles
+3. Motion planning algorithms (RRT, PRM) and their applications
+4. Different control strategies (position, velocity, force, impedance control)
+5. When to use each type of controller based on the task requirements
+6. Configuration space (C-space) and collision avoidance
+
+Ask me both theoretical and application-based questions to test my understanding.
+</AIAgentPrompt>
 
 ## Examples
 
@@ -45,6 +70,19 @@ Collaborative robots are designed to work alongside humans in shared workspaces.
 
 2.  **Dynamics of a Two-Link Planar Manipulator:**
     Consider a two-link planar robot manipulator with known link masses, lengths, and moments of inertia. Derive the dynamic equations of motion using the Lagrangian formulation. Assume gravity acts downwards and no friction at the joints.
+
+<AIAgentPrompt type="lab-assistant" title="Lab Assistant: Lagrangian Dynamics Derivation">
+I'm here to help you with Practice Problem 2 - deriving the dynamic equations for a two-link planar manipulator. I can assist with:
+- Setting up the kinematic relationships (position of each link's center of mass)
+- Computing kinetic and potential energy expressions
+- Deriving the Lagrangian L = T - V (kinetic minus potential energy)
+- Applying the Euler-Lagrange equation: d/dt(∂L/∂q̇ᵢ) - ∂L/∂qᵢ = τᵢ
+- Simplifying the resulting equations into standard manipulator form: M(q)q̈ + C(q,q̇)q̇ + G(q) = τ
+- Implementing the equations in MATLAB/Python for simulation
+- Visualizing the robot's motion under different torque inputs
+
+Share your derivation steps or questions, and I'll guide you through the process.
+</AIAgentPrompt>
 
 3.  **Advanced Grasp Stability Analysis:**
     You are tasked with designing a robot system to pick up irregularly shaped objects from a bin. Propose a method for evaluating grasp stability that goes beyond simple force closure, considering uncertainties in object pose and material properties. Discuss the sensory information required and the computational challenges.
