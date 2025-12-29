@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd ai-book && npm run build",
+  "outputDirectory": "ai-book/build",
+  "installCommand": "cd ai-book && npm install"
+}
