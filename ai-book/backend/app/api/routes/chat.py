@@ -25,6 +25,12 @@ logger = logging.getLogger(__name__)
 router = APIRouter()
 
 
+@router.get("/test")
+async def test_endpoint():
+    """Simple test endpoint to verify server is working."""
+    return {"status": "ok", "message": "Server is working!"}
+
+
 def get_or_create_user_id(request_user_id: UUID = None) -> UUID:
     """Get or create user ID for session tracking."""
     if request_user_id:
@@ -33,7 +39,6 @@ def get_or_create_user_id(request_user_id: UUID = None) -> UUID:
 
 
 @router.post("/chat", response_model=ChatResponse)
-@limiter.limit("10/minute")  # Per-user rate limit
 async def chat(
     request: Request,
     chat_request: ChatRequest,
@@ -62,6 +67,13 @@ async def chat(
         # Get or create user
         user_id = get_or_create_user_id(chat_request.user_id)
 
+        # Ensure user exists in database
+        existing_user = await db.get(User, user_id)
+        if not existing_user:
+            new_user = User(user_id=user_id, session_token=str(user_id))  # Use user_id as session token
+            db.add(new_user)
+            await db.flush()  # Flush to make user available for foreign key
+
         # Process question through RAG pipeline
         logger.info(f"Processing question: {chat_request.question[:50]}...")
 
@@ -72,7 +84,7 @@ async def chat(
 
         # Store in chat history
         chat_id = uuid4()
-        chunks_used = [UUID(chunk.chunk_id) for chunk in rag_response.chunks]
+        chunks_used = [UUID(chunk.chunk_id) if isinstance(chunk.chunk_id, str) else chunk.chunk_id for chunk in rag_response.chunks]
 
         chat_history = ChatHistory(
             chat_id=chat_id,
@@ -90,7 +102,7 @@ async def chat(
         # Format response
         sources = [
             ChunkReference(
-                chunk_id=UUID(chunk.chunk_id),
+                chunk_id=UUID(chunk.chunk_id) if isinstance(chunk.chunk_id, str) else chunk.chunk_id,
                 chapter_title=chunk.chapter_title,
                 section_title=chunk.section_title,
                 score=chunk.score,

@@ -70,13 +70,14 @@ async def search_similar_chunks(
         # Generate query embedding
         query_vector = await generate_embedding(query)
 
-        # Search Qdrant
-        search_results = qdrant_client.search(
+        # Search Qdrant (using query_points for qdrant-client >= 1.16)
+        search_response = qdrant_client.query_points(
             collection_name=COLLECTION_NAME,
-            query_vector=query_vector,
+            query=query_vector,
             limit=top_k,
             score_threshold=score_threshold,
         )
+        search_results = search_response.points
 
         # Convert to ChunkResult objects
         chunks = []

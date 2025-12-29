@@ -4,7 +4,26 @@
       "Bash(python -m py_compile:*)",
       "Bash(python:*)",
       "Bash(cat:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(git ls-remote:*)",
+      "Bash(dir:*)",
+      "Bash(venvScriptspython.exe -m pip install --upgrade pip)",
+      "Bash(./venv/Scripts/pip.exe install:*)",
+      "Bash(./venv/Scripts/python.exe:*)",
+      "Bash(./venv/Scripts/uvicorn.exe:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(curl:*)",
+      "Bash(findstr:*)",
+      "Bash(more:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill //F //PID 17920)",
+      "Bash(taskkill //F //PID 16372)",
+      "Bash(npm start)",
+      "WebFetch(domain:localhost)",
+      "Bash(tasklist:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git add:*)"
     ]
   }
 }
