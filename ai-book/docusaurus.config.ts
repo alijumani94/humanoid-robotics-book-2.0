@@ -9,6 +9,11 @@ const config: Config = {
   tagline: 'AI-driven development for humanoid robotics',
   favicon: 'img/favicon.ico',
 
+  // Custom fields for environment-specific configuration
+  customFields: {
+    apiUrl: process.env.DOCUSAURUS_API_URL || 'http://localhost:8000',
+  },
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4

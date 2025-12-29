@@ -3,7 +3,7 @@
  */
 
 import React, { useState } from 'react';
-import { config } from '../../config';
+import { useConfig } from '../../config';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -12,6 +12,7 @@ interface Message {
 }
 
 const ChatWidget: React.FC = () => {
+  const config = useConfig();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');

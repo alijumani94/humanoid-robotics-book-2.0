@@ -1,15 +1,16 @@
 /**
  * Application configuration
- * Environment variables for Docusaurus must be prefixed with DOCUSAURUS_
+ * Reads API URL from Docusaurus customFields
  */
 
-// API URL configuration - defaults to localhost for development
-export const API_URL =
-  typeof window !== 'undefined' && (window as any).DOCUSAURUS_API_URL
-    ? (window as any).DOCUSAURUS_API_URL
-    : process.env.DOCUSAURUS_API_URL || 'http://localhost:8000';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export const config = {
-  apiUrl: API_URL,
-  chatEndpoint: `${API_URL}/api/chat`,
+export const useConfig = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const apiUrl = (siteConfig.customFields?.apiUrl as string) || 'http://localhost:8000';
+
+  return {
+    apiUrl,
+    chatEndpoint: `${apiUrl}/api/chat`,
+  };
 };
