@@ -3,6 +3,7 @@
  */
 
 import React, { useState } from 'react';
+import { config } from '../../config';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -32,7 +33,7 @@ const ChatWidget: React.FC = () => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/chat', {
+      const response = await fetch(config.chatEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
