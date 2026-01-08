@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     environment: str = "development"
     api_rate_limit_per_minute: int = 20
     api_rate_limit_per_user: int = 10
-    allowed_origins: str = "http://localhost:3000"
+    allowed_origins: str = "http://localhost:3000,https://humanoid-robotics-book.vercel.app"
 
     # Chunking Configuration
     chunk_size: int = 600

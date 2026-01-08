@@ -65,3 +65,38 @@ pytest tests/
 ## Documentation
 
 Interactive API docs available at: http://localhost:8000/docs
+
+## Production Deployment
+
+### Prerequisites
+- Backend must be deployed to a hosting service (Render, Railway, etc.)
+- See [DEPLOYMENT-GUIDE.md](../DEPLOYMENT-GUIDE.md) for detailed instructions
+
+### Quick Deploy to Render
+1. Push code to GitHub
+2. Create Web Service on Render
+3. Set Root Directory to `backend`
+4. Set Build Command: `pip install -r requirements.txt`
+5. Set Start Command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+6. Add environment variables (see `.env.production.example`)
+7. Deploy
+
+### Quick Deploy to Railway
+1. Push code to GitHub
+2. Create project on Railway
+3. Connect repository
+4. Set Root Directory to `backend`
+5. Add environment variables
+6. Deploy
+
+### Environment Variables for Production
+```bash
+OPENAI_API_KEY=your-key
+QDRANT_URL=your-qdrant-url
+QDRANT_API_KEY=your-qdrant-key
+DATABASE_URL=your-database-url
+ALLOWED_ORIGINS=https://humanoid-robotics-book.vercel.app
+ENVIRONMENT=production
+```
+
+See `.env.production.example` for complete list.
