@@ -27,9 +27,9 @@ ENV PATH=/root/.local/bin:$PATH
 # Expose port
 EXPOSE 8000
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD python -c "import requests; requests.get('http://localhost:8000/api/health')"
+# Health check disabled - Railway has its own health checking
+# HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+#   CMD python -c "import requests; requests.get('http://localhost:8000/api/health')"
 
 # Run the application (uses PORT env var from Railway/hosting platform)
 CMD ["python", "-m", "app.main"]
